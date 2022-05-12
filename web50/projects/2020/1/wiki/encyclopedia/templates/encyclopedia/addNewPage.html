@@ -1,0 +1,35 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+
+{% if not exists %}
+<form action = "{% url 'addNewPage' %}" method = "post">
+    {% csrf_token %}
+    {{ pageForm }}
+    <input type="submit" name = "Save">
+</form>
+{% endif %}
+
+{% if exists %}
+<h3>Uh oh! It seems someone beat you to it :(</h3> 
+<br>
+<p>
+    It seems that there is another page on the site with the same title as the one you are <br>
+    currently making. Maybe you could try re-naming the file to something else! Best of luck :)
+</p>
+
+<a href = "{% url 'addNewPage' %}">Try Again</a>
+<br>
+{% endif %}
+
+
+<div style="position: absolute; bottom: 0;">
+    <a href = "{%  url 'index' %}" style="font-size: 20px;">View Current Pages</a>
+</div>
+
+
+{% endblock %}

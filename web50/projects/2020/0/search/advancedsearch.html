@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Advanced Search by Fuad</title>
+  <style>
+    .submit {
+      background-color: blue;
+      color: white;
+      text-align: center;
+    }
+    table {
+      font-size: 20px;
+      text-align: right;
+    }
+    .field {
+      text-align: left;
+    }
+    body {
+      text-align: center;
+    }
+    a.button {
+      margin-left: 10px;
+      float: left;
+      font-size: 40px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <a href="mainpage.html" class="button">
+    <span style="color: blue">G<span style="color: red">o<span style="color: gold">o<span style="color: blue">g<span style="color: green">l<span style="color: red">e</span>
+  </a>
+  <table align="right">
+    <tbody>
+      <tr>
+        <td>
+          <a href="googlesearch.html">Google Search</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="mainpage.html">Home Page</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table align="center">
+    <form action="https://google.com/search" name="f">
+      <tbody>
+        <tr>
+          <td>
+            <div class="field">
+                <label for="field1">all these words:</label>
+                <input type="text" class="textinput" id="field1" value=""  name="as_q">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="field">
+                <label for="field2">this exact word or phrase: </label>
+                <input type="text" class="textinput" id="field2" value=""  name="as_epq">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="field">
+                <label for="field3">any of this words: </label>
+                <input type="text" class="textinput" id="field3" value=""  name="as_oq">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="field">
+                <label for="field4">none of these words: </label>
+                <input type="text" class="textinput" id="field4" value=""  name="as_eq">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+                <input type="submit" value="Advanced search" class="submit">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </form>
+  </table>
+</body>
+</html>
